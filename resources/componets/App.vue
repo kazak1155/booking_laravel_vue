@@ -10,7 +10,7 @@
                         <router-link class="nav-link active" :to="{ name: 'about' }">about</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link active" :to="{ name: 'hotel' }">hotel</router-link>
+                        <router-link class="nav-link active" :to="{ name: 'hotel.index' }">hotel</router-link>
                     </li>
                 </ul>
             </div>
