@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 class ShowHotelController extends Controller
 {
     public function snowAllHotel() {
-        $hotels = Hotel::all();
-        return  HotelResource::collection($hotels);
+        return HotelResource::collection(Hotel::all());
     }
 }

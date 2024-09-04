@@ -58,34 +58,48 @@
             </tbody>
         </table>
     </div>
+
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
+import store from "../../js/store/index.js";
+
 export default {
     name: "show",
-
-    data() {
-        return {
-            hotels: null,
-            name: '',
-            description: '',
-            address: '',
-        }
-    },
-
-    methods: {
-        getAllHotels() {
-            axios.get("/api/hotels")
-                .then(res => {
-                    console.log(res.data)
-                    this.hotels = res.data.data
-                });
-        },
-    },
+    //
+    // data() {
+    //     return {
+    //         hotels: null,
+    //         name: '',
+    //         description: '',
+    //         address: '',
+    //     }
+    // },
+    //
+    // methods: {
+    //     getAllHotels() {
+    //         axios.get("/api/hotels")
+    //             .then(res => {
+    //                 console.log(res.data)
+    //                 this.hotels = res.data.data
+    //             });
+    //     },
+    // },
+    //
+    // mounted() {
+    //     this.getAllHotels()
+    // }
 
     mounted() {
-        this.getAllHotels()
-    }
+        this.$store.dispatch('hotel/getAllHotels')
+    },
+
+    computed: {
+        ...mapGetters({
+            hotels: 'hotel/hotels'
+        })
+    },
 }
 </script>
 
