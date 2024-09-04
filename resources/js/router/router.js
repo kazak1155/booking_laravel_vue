@@ -36,6 +36,12 @@ const routes = [
         name: "hotel.show",
         component: () => import('../../componets/hotel/showOne.vue'),
     },
+
+    {
+        path: "/room/:id",
+        name: "room.show",
+        component: () => import('../../componets/room/show.vue'),
+    },
 ];
 
 const router = createRouter({
