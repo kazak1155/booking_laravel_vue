@@ -28,7 +28,7 @@ const routes = [
     {
         path: "/hotel",
         name: "hotel.index",
-        component: () => import('../../componets/hotel/show.vue'),
+        component: () => import('../../componets/hotel/showAll.vue'),
     },
 
     {

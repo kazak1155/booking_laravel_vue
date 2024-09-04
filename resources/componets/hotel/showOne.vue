@@ -1,7 +1,4 @@
 <template>
-    <div>
-        show one hotel 1111
-    </div>
 
     <div class="card m-lg-3" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="foto hotel">
@@ -9,7 +6,9 @@
             <h5 class="card-title fw-bold">{{ hotel.name }}</h5>
             <p class="card-text">description: <b>{{ hotel.description }}</b></p>
             <p class="card-text">address: <b>{{ hotel.address }}</b></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <template v-for="room in hotel.room_id">
+                <a href="#" class="btn btn-primary m-lg-2">{{ room.name }}</a>
+            </template>
         </div>
     </div>
 

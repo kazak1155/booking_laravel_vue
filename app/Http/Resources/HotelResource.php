@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Room;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -19,6 +20,7 @@ class HotelResource extends JsonResource
             'name' => $this->name,
             'description' => $this->description,
             'address' => $this->address,
+            'room_id' => Room::where('hotel_id', $this->id)->get()
         ];
     }
 }

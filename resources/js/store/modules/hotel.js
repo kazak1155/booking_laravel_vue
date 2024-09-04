@@ -8,6 +8,7 @@ export default  {
             name: null,
             description: null,
             address: null,
+            room_id:null,
         },
     },
 
@@ -34,7 +35,6 @@ export default  {
             axios.get("/api/hotels")
                 .then(response => {
                     commit('setHotels', response.data.data)
-                    console.log(response.data.data)
                 })
                 .catch(error => {
                     console.log(error.message)
