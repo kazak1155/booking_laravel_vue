@@ -20,6 +20,7 @@ class HotelResource extends JsonResource
             'name' => $this->name,
             'description' => $this->description,
             'address' => $this->address,
+            'img_url' => $this->img_url,
             'room_id' => Room::where('hotel_id', $this->id)->get()
         ];
     }

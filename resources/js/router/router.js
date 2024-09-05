@@ -32,6 +32,12 @@ const routes = [
     },
 
     {
+        path: "/storeHotel",
+        name: "hotel.store",
+        component: () => import('../../componets/hotel/storeHotel.vue'),
+    },
+
+    {
         path: "/hotel/:id",
         name: "hotel.show",
         component: () => import('../../componets/hotel/showOne.vue'),

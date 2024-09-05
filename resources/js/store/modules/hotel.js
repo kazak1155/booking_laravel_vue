@@ -8,7 +8,8 @@ export default  {
             name: null,
             description: null,
             address: null,
-            room_id:null,
+            room_id: null,
+            img_url: null,
         },
     },
 
