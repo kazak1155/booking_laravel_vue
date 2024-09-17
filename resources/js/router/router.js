@@ -19,11 +19,11 @@ const routes = [
         component: () => import('../../componets/page/about.vue'),
     },
 
-    {
-        path: "/:pathMatch(.*)*",
-        name: "pageNotFound",
-        component: () => import('../../componets/page/notFoundPage.vue'),
-    },
+    // {
+    //     path: "/:pathMatch(.*)*",
+    //     name: "pageNotFound",
+    //     component: () => import('../../componets/page/notFoundPage.vue'),
+    // },
 
     {
         path: "/hotel",
