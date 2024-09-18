@@ -12,9 +12,6 @@
                 </router-link>
             </template>
         </div>
-        <div>
-            <button @click.prevent="this.$store.dispatch('hotel/getImageFromStorage')">get image from storage</button>
-        </div>
     </div>
 
 </template>

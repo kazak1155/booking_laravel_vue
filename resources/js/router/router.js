@@ -44,6 +44,12 @@ const routes = [
     },
 
     {
+        path: "/hotel/:id/edit",
+        name: "hotel.edit",
+        component: () => import('../../componets/hotel/updateHotel.vue'),
+    },
+
+    {
         path: "/room/:id",
         name: "room.show",
         component: () => import('../../componets/room/show.vue'),

@@ -124,7 +124,8 @@ export default  {
             commit('setResetHotel')
         },
 
-        onImageSelected({commit, dispatch, state}, event) {
+        onImageSelected({commit}, event) {
+            // console.log(event.target.files[0]);
             commit('setImage', event.target.files[0])
             commit('setImageUrl', URL.createObjectURL(event.target.files[0]))
         },

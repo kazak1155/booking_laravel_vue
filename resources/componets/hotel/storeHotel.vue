@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Create hotel</h2>
-        <form @submit.prevent="this.$store.dispatch('hotel/storeHotel', {name: hotel.name, description: hotel.description, address: hotel.address})">
+            <form @submit.prevent="this.$store.dispatch('hotel/storeHotel', {name: hotel.name, description: hotel.description, address: hotel.address})">
             <div class="mb-3 border-top">
                 <label class="form-label">enter hotel name</label>
                 <br>
@@ -18,9 +18,9 @@
                 <input v-model="hotel.address" type="text" name="address" id="hotelAddress" placeholder="Hotel address">
             </div>
             <div class="mb-3 border-top">
-                <label class="form-laformData.bel">upload image hotel</label>
+                <label class="form-formData.bel">upload image hotel</label>
                 <br>
-                <input type="file" @change="handleFileUpload"  ref="fileInput" />
+                <input type="file" @change="showUploadImage"  ref="fileInput" />
             </div>
             <div class="mb-3">
                 <button class="btn btn-primary" type="submit">Create hotel</button>
@@ -44,5 +44,11 @@ export default {
             imageUrl: 'hotel/imageUrl',
         })
     },
+
+    methods: {
+        showUploadImage(event) {
+            this.$store.dispatch('hotel/onImageSelected', event)
+        }
+    }
 };
 </script>
